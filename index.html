@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Protocolos Clínicos</title>
+    <style>
+        /* He puesto los estilos aquí mismo para no necesitar un archivo CSS extra para esta página simple */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 77, 153, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #005a9c;
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        header p {
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .protocol-list {
+            list-style-type: none;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .protocol-list li {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .protocol-list li:last-child {
+            border-bottom: none;
+        }
+
+        .protocol-list a {
+            display: block;
+            padding: 25px 30px;
+            text-decoration: none;
+            color: #003d69;
+            font-size: 1.3em;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        .protocol-list a:hover {
+            background-color: #e9f5ff;
+            color: #005a9c;
+        }
+
+        .protocol-list a::after {
+            content: '›';
+            font-size: 2em;
+            color: #005a9c;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.2s ease;
+        }
+        
+        .protocol-list a:hover::after {
+            transform: translateY(-50%) translateX(5px);
+        }
+
+        footer {
+            background-color: #e9ecef;
+            color: #6c757d;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Portal de Protocolos Clínicos</h1>
+            <p>Seleccione una guía de decisión para comenzar</p>
+        </header>
+        
+        <ul class="protocol-list">
+            <li>
+                <a href="colecistitis.html">Colecistitis Aguda</a>
+            </li>
+            <!-- CUANDO AÑADAS UN NUEVO PROTOCOLO, AÑADE UN NUEVO 'LI' AQUÍ -->
+            <!-- <li>
+                <a href="sepsis.html">Protocolo de Sepsis</a>
+            </li> -->
+        </ul>
+        
+        <footer>
+            <p>Herramientas de apoyo para profesionales sanitarios.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

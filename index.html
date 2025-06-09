@@ -88,6 +88,37 @@
             transform: translateY(-50%) translateX(5px);
         }
 
+        /* --- ESTILOS PARA LOS ENLACES DESACTIVADOS --- */
+        .protocol-list a.disabled-link {
+            color: #a0a0a0; /* Color grisáceo */
+            background-color: #f8f9fa; /* Fondo ligeramente gris */
+            cursor: not-allowed; /* Cambia el cursor para indicar que no es clicable */
+        }
+
+        .protocol-list a.disabled-link:hover {
+            background-color: #f8f9fa; /* Evita el cambio de color al pasar el ratón */
+        }
+        
+        .protocol-list a.disabled-link::after {
+            color: #c0c0c0; /* Flecha también en gris */
+        }
+        
+        .protocol-list a.disabled-link::before {
+            content: 'Próximamente';
+            font-size: 0.6em;
+            font-weight: bold;
+            color: #888;
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #e0e0e0;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        /* --- FIN DE LOS ESTILOS --- */
+
+
         footer {
             background-color: #e9ecef;
             color: #6c757d;
@@ -107,12 +138,19 @@
         
         <ul class="protocol-list">
             <li>
+                <!-- Protocolo Activo -->
                 <a href="colecistitis.html">Colecistitis Aguda</a>
             </li>
-            <!-- CUANDO AÑADAS UN NUEVO PROTOCOLO, AÑADE UN NUEVO 'LI' AQUÍ -->
-            <!-- <li>
-                <a href="sepsis.html">Protocolo de Sepsis</a>
-            </li> -->
+            
+            <!-- --- PROTOCOLOS FUTUROS --- -->
+            <li>
+                <!-- Protocolo Desactivado. La clase "disabled-link" y el href="#" hacen la magia -->
+                <a href="#" class="disabled-link" onclick="return false;">Isquemia Mesentérica</a>
+            </li>
+            <li>
+                <a href="#" class="disabled-link" onclick="return false;">Oclusión Intestinal</a>
+            </li>
+            
         </ul>
         
         <footer>

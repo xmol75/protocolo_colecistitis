@@ -27,10 +27,29 @@ header {
     color: white;
     padding: 20px 25px;
     text-align: center;
+    position: relative;
 }
 
+.home-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
 header h1 {
-    margin: 0;
+    margin: 10px 0 0 0;
     font-size: 1.9em;
 }
 
@@ -103,7 +122,7 @@ main {
     margin-top: 25px;
 }
 
-#next-button, #restart-button, .secondary-button {
+#next-button, #restart-button, .secondary-button, .home-link-button {
     flex-grow: 1;
     padding: 15px;
     font-size: 1.2em;
@@ -113,13 +132,15 @@ main {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-align: center;
 }
 
-#next-button {
+#next-button, .home-link-button {
     background-color: #28a745;
+    text-decoration: none; /* For the <a> tag */
 }
 
-#next-button:hover {
+#next-button:hover, .home-link-button:hover {
     background-color: #218838;
 }
 
@@ -131,11 +152,6 @@ main {
     background-color: #5a6268;
 }
 
-#restart-button {
-    width: 100%;
-}
-
-
 .hidden {
     display: none;
 }
@@ -143,6 +159,12 @@ main {
 #result-container {
     padding: 20px;
     border-radius: 8px;
+}
+
+.final-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .result-section {

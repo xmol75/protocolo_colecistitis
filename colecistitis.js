@@ -190,11 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const stepContainer = document.getElementById('step-container');
     const resultContainer = document.getElementById('result-container');
+    const resultContentDiv = document.getElementById('result-content');
     const stepTitle = document.getElementById('step-title');
     const stepDescription = document.getElementById('step-description');
     const questionArea = document.getElementById('question-area');
     const nextButton = document.getElementById('next-button');
     const backButton = document.getElementById('back-button');
+    const restartButton = document.getElementById('restart-button');
 
     let currentStepIndex = 0;
 
@@ -220,10 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (step.action) {
                 resultContent = step.action(appState);
             }
-            resultContainer.innerHTML = resultContent + '<button id="restart-button">Iniciar Nuevo Protocolo</button>';
+            resultContentDiv.innerHTML = resultContent;
             stepContainer.classList.add('hidden');
             resultContainer.classList.remove('hidden');
-            document.getElementById('restart-button').addEventListener('click', restart);
             return;
         }
 
@@ -272,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (history.length > 1) {
             currentStepIndex = history.pop();
             const prevStepIndex = history[history.length-1];
-            history.pop(); // Pop again to avoid loop
+            history.pop();
             renderStep(prevStepIndex);
         }
     }
@@ -284,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateFinalSummary(state) {
-        eval_severity.action(state); // Ensure severity is calculated
+        eval_severity.action(state);
         
         let summary = `<div class="result-section"><h3>Diagnóstico y Gravedad</h3><p>Colecistitis Aguda <strong>Grado ${state.severity} (${state.severity === 1 ? 'Leve' : state.severity === 2 ? 'Moderada' : 'Severa'})</strong></p></div>`;
 
@@ -331,14 +332,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (needsIM) summary += `<li><strong>Considerar valoración por Medicina Interna:</strong> Paciente crónico (PCC/PCA) que puede no ser candidato a cirugía y requerir tratamiento de soporte.</li>`;
             summary += `</ul></div>`;
         }
-
         return summary;
     }
     
-    // Find the eval_severity logic step to use it later
     const eval_severity = protocolSteps.find(s => s.id === 'eval_severity');
 
     nextButton.addEventListener('click', handleNext);
     backButton.addEventListener('click', handleBack);
+    restartButton.addEventListener('click', restart);
     restart();
 });

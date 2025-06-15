@@ -93,6 +93,10 @@
         .arrow.rotate {
             transform: rotate(90deg);
         }
+        /* Custom style for justified text */
+        .text-justify-custom {
+            text-align: justify;
+        }
     </style>
 </head>
 <body class="bg-gray-100 p-4">
@@ -104,7 +108,7 @@
 
         <section id="inicio" class="mt-8">
             <h2 class="section-title">Inicio</h2>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed text-justify-custom">
                 Este protocolo clínico sobre la colecistitis aguda ha sido desarrollado y adaptado para su uso en el Hospital Universitario Son Espases.
                 Se basa en las recomendaciones y directrices internacionales de las "Tokyo Guidelines 2018", reconocidas por su rigor y amplia aceptación en la práctica médica.
                 Nuestro objetivo es proporcionar una guía clara y actualizada para el diagnóstico, clasificación de la gravedad y plan terapéutico de la colecistitis aguda,
@@ -121,7 +125,7 @@
                 <span class="arrow">&#9654;</span>
             </div>
             <div id="diagnostico-content" class="collapsible-content">
-                <p class="text-gray-700 list-item">Para diagnosticar colecistitis aguda, se deben cumplir 1 elemento de A, 1 de B y la respuesta de C debe ser un "sí".</p>
+                <p class="text-gray-700 list-item text-justify-custom">Para diagnosticar colecistitis aguda, se deben cumplir 1 elemento de A, 1 de B y la respuesta de C debe ser un "sí".</p>
 
                 <h4 class="subsection-title text-base">1. Elemento A: Signos Locales de Inflamación</h4>
                 <ul class="list-disc indent-list text-gray-700">
@@ -141,11 +145,11 @@
                     <li class="list-item">¿Existen hallazgos compatibles con inflamación de la vesícula biliar (edema de pared o líquido perivesicular) en la ecografía?</li>
                 </ul>
                 <div class="note">
-                    <p class="text-gray-800">
+                    <p class="text-gray-800 text-justify-custom">
                         Si no se cumplen los criterios, el paciente no presenta una colecistitis aguda y se acaba el protocolo con la frase:
                         "No cumple criterios para sospecha clínica de colecistitis aguda. Considerar otros diagnósticos. Si la sospecha clínica persiste, reevaluar o considerar otras pruebas."
                     </p>
-                    <p class="text-gray-800 mt-2">
+                    <p class="text-gray-800 mt-2 text-justify-custom">
                         Si se diagnostica colecistitis aguda, se prosigue para evaluar la gravedad.
                     </p>
                 </div>
@@ -157,7 +161,7 @@
                 <span class="arrow">&#9654;</span>
             </div>
             <div id="gravedad-content" class="collapsible-content">
-                <p class="text-gray-700 list-item">Si cumple 1 criterio de moderada y ninguno de grave es moderada. Si cumple 1 criterio de grave es grave. Si no cumple ningún criterio es leve.</p>
+                <p class="text-gray-700 list-item text-justify-custom">Si cumple 1 criterio de moderada y ninguno de grave es moderada. Si cumple 1 criterio de grave es grave. Si no cumple ningún criterio es leve.</p>
 
                 <h4 class="subsection-title text-base">4. Criterios de Grado 2 (Moderada)</h4>
                 <ul class="list-disc indent-list text-gray-700">
@@ -190,17 +194,17 @@
                     <li class="list-item">¿El índice de Charlson es &gt;6?</li>
                 </ul>
                 <div class="note">
-                    <p class="text-gray-800">
+                    <p class="text-gray-800 text-justify-custom">
                         Si se responde que sí a alguna de las preguntas, el paciente no puede ser intervenido quirúrgicamente de urgencias y
                         debe seguir tratamiento antibiótico.
                     </p>
-                    <p class="text-gray-800 mt-2">
+                    <p class="text-gray-800 mt-2 text-justify-custom">
                         Si las respuestas son no, el tratamiento es la colecistectomía laparoscópica urgente.
                     </p>
                 </div>
 
                 <h4 class="subsection-title text-base">7. Factores de Riesgo de Mala Evolución</h4>
-                <p class="text-gray-700 small-text">Si alguna respuesta es sí, el paciente tiene criterios de mala evolución en el tratamiento antibiótico.</p>
+                <p class="text-gray-700 small-text text-justify-custom">Si alguna respuesta es sí, el paciente tiene criterios de mala evolución en el tratamiento antibiótico.</p>
                 <h5 class="subsection-title text-sm">Relacionados con BLED:</h5>
                 <ul class="list-disc indent-list text-gray-700">
                     <li class="list-item">¿Estancia hospitalaria &gt; 15 días (en los últimos 3 meses)?</li>
@@ -236,7 +240,7 @@
                 </ul>
 
                 <h4 class="subsection-title text-base">8. Consideraciones Adicionales para Antibióticos</h4>
-                <p class="text-gray-700 small-text">Las preguntas de arriba son para saber escoger el tratamiento antibiótico.</p>
+                <p class="text-gray-700 small-text text-justify-custom">Las preguntas de arriba son para saber escoger el tratamiento antibiótico.</p>
                 <ul class="list-disc indent-list text-gray-700">
                     <li class="list-item">¿Paciente alérgico a B-lactámicos?</li>
                     <li class="list-item">¿Existe cultivo positivo por germen anaerobio o sospecha clínica?</li>
@@ -262,11 +266,11 @@
                     <li class="list-item">¿El paciente es un Paciente Crónico Avanzado (PCA)?</li>
                 </ul>
                 <div class="note">
-                    <p class="text-gray-800">
+                    <p class="text-gray-800 text-justify-custom">
                         Si alguna de las 5 primeras preguntas se responde con un sí:
                         "Considerar ingreso/valoración por Digestivo debido a cumple criterios de ictericia obstructiva según las guías internacionales."
                     </p>
-                    <p class="text-gray-800 mt-2">
+                    <p class="text-gray-800 mt-2 text-justify-custom">
                         Si cumple alguno de los siguientes (PCC o PCA):
                         "Considerar ingreso/valoración por Medicina Interna debido a que el paciente no será candidato a cirugía y es necesario un tratamiento de soporte médico debido a sus enfermedades de base."
                     </p>
@@ -279,7 +283,7 @@
                 <span class="arrow">&#9654;</span>
             </div>
             <div id="tratamiento-gravedad-content" class="collapsible-content">
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed text-justify-custom">
                     El tratamiento se individualiza según la gravedad de la colecistitis aguda. Los principios generales incluyen el control
                     de la infección (generalmente con antibióticos), la colecistectomía, el drenaje (cuando es necesario) y el soporte
                     intensivo en casos graves. Según las Tokyo Guidelines:
@@ -310,7 +314,7 @@
                     <li class="list-item"><strong>Leve-Moderada:</strong> Aztreonam 2g/8h o Gentamicina 240mg/kg/24h. Se puede añadir Metronidazol 500mg/8h si existe cultivo positivo por germen anaerobio o sospecha (obligado si fístula o anastomosis bilioentérica o prótesis biliar).</li>
                     <li class="list-item"><strong>Grave:</strong> Aztreonam 240g/8h + Metronidazol 500mg/8h. Se puede añadir Amikacina 15mg/kg/24h si hay riesgo de infección por <em>P. aeruginosa</em> o en pacientes con shock séptico.</li>
                 </ul>
-                <p class="text-gray-700 small-text mt-2">
+                <p class="text-gray-700 small-text mt-2 text-justify-custom">
                     En obesidad mórbida, la dosificación de Gentamicina y Amikacina se ajusta utilizando el peso ideal más el 40% del exceso de peso del paciente.
                 </p>
             </div>
@@ -318,7 +322,7 @@
 
         <section id="bibliografia" class="mt-8">
             <h2 class="section-title">Bibliografía</h2>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed text-justify-custom">
                 Este protocolo se basa en las "Tokyo Guidelines 2018", las cuales proporcionan una base sólida para el manejo de la colecistitis aguda.
                 A continuación, se presentan los enlaces a los documentos originales:
             </p>
@@ -337,7 +341,7 @@
         </section>
 
         <footer class="text-center text-gray-500 text-sm mt-12 p-4 border-t border-gray-200 rounded-b-lg">
-            Xmol &copy; Hospital Universitario Son Espases. Todos los derechos reservados.
+            xmol &copy; Unidad de Cirugía Hepatobiliar y Trasplante Hepático. Servicio de Cirugía General y del Aparato Digestivo. Hospital Universitario Son Espases. Todos los derechos reservados.
         </footer>
     </div>
 

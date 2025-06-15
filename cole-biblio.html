@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Colecistitis Aguda - Hospital Universitario Son Espases</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+        .subsection-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .list-item {
+            margin-bottom: 0.5rem;
+        }
+        .indent-list {
+            padding-left: 1.5rem;
+        }
+        .note {
+            background-color: #e6f2ff;
+            border-left: 4px solid #1a73e8;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        /* Styles for collapsible sections */
+        .collapsible-header {
+            background-color: #e9ecef;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: #333;
+            transition: background-color 0.3s ease;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .collapsible-header:hover {
+            background-color: #dde1e5;
+        }
+        .collapsible-content {
+            padding: 1rem 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            display: none; /* Hidden by default */
+            overflow: hidden;
+            background-color: #fdfdfd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .collapsible-content.active {
+            display: block;
+        }
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+        .arrow.rotate {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container">
+        <header class="header">
+            <h1 class="text-3xl font-bold">Protocolo de Colecistitis Aguda</h1>
+            <p class="text-lg mt-2">Hospital Universitario Son Espases</p>
+        </header>
+
+        <section id="inicio" class="mt-8">
+            <h2 class="section-title">Inicio</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Este protocolo clínico sobre la colecistitis aguda ha sido desarrollado y adaptado para su uso en el Hospital Universitario Son Espases.
+                Se basa en las recomendaciones y directrices internacionales de las "Tokyo Guidelines 2018", reconocidas por su rigor y amplia aceptación en la práctica médica.
+                Nuestro objetivo es proporcionar una guía clara y actualizada para el diagnóstico, clasificación de la gravedad y plan terapéutico de la colecistitis aguda,
+                garantizando la mejor atención posible a nuestros pacientes.
+            </p>
+        </section>
+
+        <section id="protocolo" class="mt-8">
+            <h2 class="section-title">Protocolo Clínico Detallado</h2>
+
+            <!-- PARTE 1: DIAGNÓSTICO -->
+            <div class="collapsible-header" data-target="diagnostico-content">
+                PARTE 1: DIAGNÓSTICO
+                <span class="arrow">&#9654;</span>
+            </div>
+            <div id="diagnostico-content" class="collapsible-content">
+                <p class="text-gray-700 list-item">Para diagnosticar colecistitis aguda, se deben cumplir 1 elemento de A, 1 de B y la respuesta de C debe ser un "sí".</p>
+
+                <h4 class="subsection-title text-base">1. Elemento A: Signos Locales de Inflamación</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Presenta Signo de Murphy (dolor a la palpación en hipocondrio derecho con apnea)?</li>
+                    <li class="list-item">¿Presenta Masa/dolor/defensa en hipocondrio derecho?</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">2. Elemento B: Signos Sistémicos de Inflamación</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Presenta Fiebre?</li>
+                    <li class="list-item">¿Presenta PCR (Proteína C Reactiva) elevada?</li>
+                    <li class="list-item">¿Presenta Leucocitosis?</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">3. Elemento C: Hallazgos de Imagen</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Existen hallazgos compatibles con inflamación de la vesícula biliar (edema de pared o líquido perivesicular) en la ecografía?</li>
+                </ul>
+                <div class="note">
+                    <p class="text-gray-800">
+                        Si no se cumplen los criterios, el paciente no presenta una colecistitis aguda y se acaba el protocolo con la frase:
+                        "No cumple criterios para sospecha clínica de colecistitis aguda. Considerar otros diagnósticos. Si la sospecha clínica persiste, reevaluar o considerar otras pruebas."
+                    </p>
+                    <p class="text-gray-800 mt-2">
+                        Si se diagnostica colecistitis aguda, se prosigue para evaluar la gravedad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PARTE 2: CLASIFICACIÓN DE GRAVEDAD -->
+            <div class="collapsible-header" data-target="gravedad-content">
+                PARTE 2: CLASIFICACIÓN DE GRAVEDAD
+                <span class="arrow">&#9654;</span>
+            </div>
+            <div id="gravedad-content" class="collapsible-content">
+                <p class="text-gray-700 list-item">Si cumple 1 criterio de moderada y ninguno de grave es moderada. Si cumple 1 criterio de grave es grave. Si no cumple ningún criterio es leve.</p>
+
+                <h4 class="subsection-title text-base">4. Criterios de Grado 2 (Moderada)</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Leucocitosis &gt; 18.000/mm&sup3;?</li>
+                    <li class="list-item">¿Masa dolorosa palpable en el hipocondrio derecho?</li>
+                    <li class="list-item">¿Duración de los síntomas &gt; 72 horas?</li>
+                    <li class="list-item">¿Marcada inflamación local (colecistitis gangrenosa, enfisema, absceso perivesicular o hepático, peritonitis biliar)?</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">5. Criterios de Grado 3 (Severa) por Disfunción Orgánica</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Disfunción cardiovascular (hipotensión en tratamiento con dopamina &ge;5 &mu;g/kg/min o cualquier dosis de norepinefrina)?</li>
+                    <li class="list-item">¿Disfunción neurológica (alteración de la conciencia)?</li>
+                    <li class="list-item">¿Disfunción respiratoria (PaO<sub>2</sub>/FiO<sub>2</sub> &lt; 300)?</li>
+                    <li class="list-item">¿Disfunción renal (oliguria, creatinina sérica &gt;2,0 mg/dl)?</li>
+                    <li class="list-item">¿Disfunción hepática (INR &gt;1,5)?</li>
+                    <li class="list-item">¿Disfunción hematológica (plaquetas &lt;100.000/mm&sup3;)?</li>
+                </ul>
+            </div>
+
+            <!-- PARTE 3: PLAN TERAPÉUTICO -->
+            <div class="collapsible-header" data-target="plan-terapeutico-content">
+                PARTE 3: PLAN TERAPÉUTICO
+                <span class="arrow">&#9654;</span>
+            </div>
+            <div id="plan-terapeutico-content" class="collapsible-content">
+                <h4 class="subsection-title text-base">6. Criterios Quirúrgicos (para Colecistitis Leve)</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿El paciente es ASA III?</li>
+                    <li class="list-item">¿El índice de Charlson es &gt;6?</li>
+                </ul>
+                <div class="note">
+                    <p class="text-gray-800">
+                        Si se responde que sí a alguna de las preguntas, el paciente no puede ser intervenido quirúrgicamente de urgencias y
+                        debe seguir tratamiento antibiótico.
+                    </p>
+                    <p class="text-gray-800 mt-2">
+                        Si las respuestas son no, el tratamiento es la colecistectomía laparoscópica urgente.
+                    </p>
+                </div>
+
+                <h4 class="subsection-title text-base">7. Factores de Riesgo de Mala Evolución</h4>
+                <p class="text-gray-700 small-text">Si alguna respuesta es sí, el paciente tiene criterios de mala evolución en el tratamiento antibiótico.</p>
+                <h5 class="subsection-title text-sm">Relacionados con BLED:</h5>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Estancia hospitalaria &gt; 15 días (en los últimos 3 meses)?</li>
+                    <li class="list-item">¿Procedencia de un centro sociosanitario?</li>
+                    <li class="list-item">¿Infección urinaria recurrente?</li>
+                    <li class="list-item">¿Obstrucción biliar?</li>
+                    <li class="list-item">¿Tratamiento con corticoides?</li>
+                    <li class="list-item">¿Sonda nasogástrica permanente o endoscopia terapéutica?</li>
+                    <li class="list-item">¿Uso de Cefalosporinas de 3<sup>a</sup> generación (en los últimos 3 meses)?</li>
+                    <li class="list-item">¿Uso de Aminoglucósidos (en los últimos 3 meses)?</li>
+                    <li class="list-item">¿Uso de Quinolonas (en los últimos 3 meses)?</li>
+                    <li class="list-item">¿Uso de Carbapenémicos (en los últimos 3 meses)?</li>
+                    <li class="list-item">¿Uso de B-lactámicos + inhibidor de B-lactamasas (en los últimos 3 meses)?</li>
+                </ul>
+                <h5 class="subsection-title text-sm">Relacionados con Gravedad:</h5>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Shock séptico?</li>
+                </ul>
+                <h5 class="subsection-title text-sm">Relacionados con Comorbilidad:</h5>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Inmunodepresión?</li>
+                    <li class="list-item">¿Malnutrición?</li>
+                    <li class="list-item">¿Niveles bajos de albúmina?</li>
+                    <li class="list-item">¿Diabetes complicada o mal controlada?</li>
+                    <li class="list-item">¿Insuficiencia renal crónica?</li>
+                    <li class="list-item">¿EPOC grave?</li>
+                    <li class="list-item">¿Cirrosis hepática?</li>
+                    <li class="list-item">¿Presencia de enfermedad neoplásica?</li>
+                </ul>
+                <h5 class="subsection-title text-sm">Relacionados con Edad:</h5>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Edad &gt;70 años?</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">8. Consideraciones Adicionales para Antibióticos</h4>
+                <p class="text-gray-700 small-text">Las preguntas de arriba son para saber escoger el tratamiento antibiótico.</p>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Paciente alérgico a B-lactámicos?</li>
+                    <li class="list-item">¿Existe cultivo positivo por germen anaerobio o sospecha clínica?</li>
+                    <li class="list-item">¿Presenta fístula o anastomosis bilioentérica o prótesis biliar?</li>
+                    <li class="list-item">¿Presenta obesidad mórbida?</li>
+                </ul>
+            </div>
+
+            <!-- PARTE 4: CRITERIOS DE INGRESO -->
+            <div class="collapsible-header" data-target="ingreso-content">
+                PARTE 4: CRITERIOS DE INGRESO
+                <span class="arrow">&#9654;</span>
+            </div>
+            <div id="ingreso-content" class="collapsible-content">
+                <h4 class="subsection-title text-base">9. Criterios de Afectación de Vía Biliar y Comorbilidad</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">¿Aumento del tamaño de la vía biliar &gt; 8 mm (&lt;70 años) o &gt;10 mm (&gt;70 años)?</li>
+                    <li class="list-item">¿Confirmación por prueba de imagen de litiasis en vía biliar principal?</li>
+                    <li class="list-item">¿Bilirrubina sérica &gt;3 mg/dL?</li>
+                    <li class="list-item">¿Cifras de Bilirrubina entre 1,5-3 mg/dl que tras dos determinaciones con un intervalo de 24 horas, se mantienen o incrementan?</li>
+                    <li class="list-item">¿GGT, FA, AST y/o ALT con valores 1,5 por encima de lo normal?</li>
+                    <li class="list-item">¿El paciente es un Paciente Crónico Complejo (PCC)?</li>
+                    <li class="list-item">¿El paciente es un Paciente Crónico Avanzado (PCA)?</li>
+                </ul>
+                <div class="note">
+                    <p class="text-gray-800">
+                        Si alguna de las 5 primeras preguntas se responde con un sí:
+                        "Considerar ingreso/valoración por Digestivo debido a cumple criterios de ictericia obstructiva según las guías internacionales."
+                    </p>
+                    <p class="text-gray-800 mt-2">
+                        Si cumple alguno de los siguientes (PCC o PCA):
+                        "Considerar ingreso/valoración por Medicina Interna debido a que el paciente no será candidato a cirugía y es necesario un tratamiento de soporte médico debido a sus enfermedades de base."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tratamiento según la Gravedad -->
+            <div class="collapsible-header" data-target="tratamiento-gravedad-content">
+                TRATAMIENTO SEGÚN LA GRAVEDAD Y ANTIBIÓTICOS ESPECÍFICOS
+                <span class="arrow">&#9654;</span>
+            </div>
+            <div id="tratamiento-gravedad-content" class="collapsible-content">
+                <p class="text-gray-700 leading-relaxed">
+                    El tratamiento se individualiza según la gravedad de la colecistitis aguda. Los principios generales incluyen el control
+                    de la infección (generalmente con antibióticos), la colecistectomía, el drenaje (cuando es necesario) y el soporte
+                    intensivo en casos graves. Según las Tokyo Guidelines:
+                </p>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item"><strong>Grado 1 - Leve:</strong> El tratamiento incluye colecistectomía laparoscópica y antibióticos (excepto si se ha respondido que sí en alguna de las preguntas de los criterios quirúrgicos y sólo se trata mediante antibióticos).</li>
+                    <li class="list-item"><strong>Grado 2 - Moderada:</strong> El tratamiento incluye ingreso con antibióticos y tratamiento de soporte.</li>
+                    <li class="list-item"><strong>Grado 3 - Severa:</strong> El tratamiento incluye drenaje (percutáneo) más antibióticos más soporte intensivo.</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">Tratamiento Antibiótico Específico</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">Colecistitis Leve SIN FACTORES DE RIESGO de mala evolución: Amoxicilina-clavulánico 2g/8h.</li>
+                    <li class="list-item">Colecistitis Leve CON FACTORES DE RIESGO de mala evolución: Ertapenem 1g/24h.</li>
+                    <li class="list-item">Colecistitis Moderada SIN FACTORES DE RIESGO de mala evolución: Ertapenem 1g/24h.</li>
+                    <li class="list-item">Colecistitis Moderada CON FACTORES DE RIESGO de mala evolución: Ertapenem 1g/24h.</li>
+                    <li class="list-item">Colecistitis Grave SIN FACTORES DE RIESGO de mala evolución: Piperacilina-tazobactam 4-0.5g/6-8h.</li>
+                    <li class="list-item">Colecistitis Grave CON FACTORES DE RIESGO de mala evolución: Meropenem 1g/8h.</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">Consideraciones Adicionales para Antibióticos (continuación)</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item">Añadir Metronidazol 500mg/8h si existe cultivo positivo por germen anaerobio o sospecha clínica. Es obligatorio si hay fístula o anastomosis bilioentérica o prótesis biliar.</li>
+                </ul>
+
+                <h4 class="subsection-title text-base">Para pacientes alérgicos a B-lactámicos:</h4>
+                <ul class="list-disc indent-list text-gray-700">
+                    <li class="list-item"><strong>Leve-Moderada:</strong> Aztreonam 2g/8h o Gentamicina 240mg/kg/24h. Se puede añadir Metronidazol 500mg/8h si existe cultivo positivo por germen anaerobio o sospecha (obligado si fístula o anastomosis bilioentérica o prótesis biliar).</li>
+                    <li class="list-item"><strong>Grave:</strong> Aztreonam 240g/8h + Metronidazol 500mg/8h. Se puede añadir Amikacina 15mg/kg/24h si hay riesgo de infección por <em>P. aeruginosa</em> o en pacientes con shock séptico.</li>
+                </ul>
+                <p class="text-gray-700 small-text mt-2">
+                    En obesidad mórbida, la dosificación de Gentamicina y Amikacina se ajusta utilizando el peso ideal más el 40% del exceso de peso del paciente.
+                </p>
+            </div>
+        </section>
+
+        <section id="bibliografia" class="mt-8">
+            <h2 class="section-title">Bibliografía</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Este protocolo se basa en las "Tokyo Guidelines 2018", las cuales proporcionan una base sólida para el manejo de la colecistitis aguda.
+                A continuación, se presentan los enlaces a los documentos originales:
+            </p>
+            <ul class="list-disc indent-list text-gray-700">
+                <li class="list-item">
+                    Yokoe M, Hata J, Takada T, et al. Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis (with videos).
+                    J Hepatobiliary Pancreat Sci. 2018;25(1):41-54.
+                    <a href="https://onlinelibrary.wiley.com/doi/10.1002/jhbp.515" target="_blank" class="text-blue-600 hover:underline">Enlace al documento</a>
+                </li>
+                <li class="list-item">
+                    Okamoto K, Suzuki K, Takada T, et al. Tokyo Guidelines 2018: flowchart for the management of acute cholecystitis.
+                    J Hepatobiliary Pancreat Sci. 2018;25(1):55-72.
+                    <a href="https://onlinelibrary.wiley.com/doi/10.1002/jhbp.516" target="_blank" class="text-blue-600 hover:underline">Enlace al documento</a>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12 p-4 border-t border-gray-200 rounded-b-lg">
+            Protocolo Gemini &copy; Hospital Universitario Son Espases. Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+            collapsibleHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    const content = document.getElementById(targetId);
+                    const arrow = this.querySelector('.arrow');
+
+                    if (content.classList.contains('active')) {
+                        content.classList.remove('active');
+                        arrow.classList.remove('rotate');
+                        content.style.maxHeight = null; // Reset maxHeight
+                    } else {
+                        // Close other open sections
+                        document.querySelectorAll('.collapsible-content.active').forEach(openContent => {
+                            openContent.classList.remove('active');
+                            openContent.style.maxHeight = null;
+                            openContent.previousElementSibling.querySelector('.arrow').classList.remove('rotate');
+                        });
+
+                        // Open the clicked section
+                        content.classList.add('active');
+                        arrow.classList.add('rotate');
+                        // Set maxHeight for smooth animation
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Optional: Add CSS for smooth maxHeight transition for collapsible content
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .collapsible-content {
+                    max-height: 0;
+                    transition: max-height 0.3s ease-out;
+                }
+                .collapsible-content.active {
+                    max-height: fit-content; /* Adjust based on content, or use a large value */
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
